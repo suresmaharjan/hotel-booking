@@ -25,21 +25,21 @@ export default function Room({ room }) {
                 </Row>
             </div>
 
-            
+
             <Modal
                 show={show}
                 centered
-                onHide={() => setShow(false)} 
+                onHide={() => setShow(false)}
             >
-                <button 
+                <button
                     onClick={() => setShow(false)}
                     className="btn-close"></button>
                 <Modal.Header >
                     <p className="lead">{room.name}</p>
                 </Modal.Header>
                 <Carousel>
-                    {room.imageurls.map(item => (
-                        <Carousel.Item>
+                    {room.imageurls.map((item, idx) => (
+                        <Carousel.Item key={idx}>
                             <img
                                 className="d-block w-100"
                                 src={item}

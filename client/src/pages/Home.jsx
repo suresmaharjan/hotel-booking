@@ -13,7 +13,7 @@ export default function Home() {
 
     return (
         <Container>
-            {rooms && rooms?.map(room => (<Room {...{room }} />))}
+            {rooms && rooms?.map(room => (<Room {...{room }} key={room._id} />))}
         </Container>
     )
 }
